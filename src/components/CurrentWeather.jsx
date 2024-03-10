@@ -1,9 +1,11 @@
 import React from "react";
 
-function CurrentWeather({ currentWeatherData }) {
-  return !currentWeatherData?.response
-    ? weatherData(currentWeatherData)
-    : onError(currentWeatherData);
+function CurrentWeather(props) {
+  console.log(props.currentWeatherData);
+
+  return !props.currentWeatherData?.response
+    ? weatherData(props.currentWeatherData)
+    : onError(props.currentWeatherData);
 }
 
 function onError({ response: request }) {

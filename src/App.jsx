@@ -17,8 +17,16 @@ function App() {
         </div>
         <div className="row">
           {currentWeatherData ? (
-            <CurrentWeather props={currentWeatherData}></CurrentWeather>
-          ) : null}
+            <CurrentWeather
+              currentWeatherData={currentWeatherData}
+            ></CurrentWeather>
+          ) : (
+            <div className="d-flex justify-content-center align-items-center mt-5">
+              <div className="spinner-border text-primary" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>
