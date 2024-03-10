@@ -14,7 +14,6 @@ function Navbar(props) {
   }, []);
 
   const getCurrentWeather = (event) => {
-    props.getWeatherData(null);
     event.preventDefault();
     getDataFromApi(event.target[0].value);
   };
