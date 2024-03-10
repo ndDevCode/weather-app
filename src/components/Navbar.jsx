@@ -19,7 +19,7 @@ function Navbar(props) {
   };
 
   const getDataFromApi = (city) => {
-    const url = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`;
     Axios.get(url)
       .then((res) => {
         props.getWeatherData(res.data);
